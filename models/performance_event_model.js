@@ -6,8 +6,10 @@ const PerformanceEvent = sequelize.define(
     {
         tracker: { type: Sequelize.STRING, allowNull: false },
         duration: { type: Sequelize.INTEGER, allowNull: false },
-        date: { type: Sequelize.DATE, defaultValue: Sequelize.NOW },
+        created_at: { type: Sequelize.DATE, defaultValue: Sequelize.NOW },
         app_version: { type: Sequelize.STRING, allowNull: false },
+        package_name: { type: Sequelize.STRING, allowNull: false },
+        user_id : { type: Sequelize.STRING, allowNull: false },
     },
     {
         tableName: "performance_events",
